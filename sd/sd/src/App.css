@@ -1,0 +1,149 @@
+/* ============================= */
+/* 🌐 GLOBAL BASE STYLES */
+/* ============================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue",
+    sans-serif;
+  background-color: #020617; /* slate-950 */
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* ============================= */
+/* ✨ TEXT SELECTION */
+/* ============================= */
+
+::selection {
+  background-color: rgba(6, 182, 212, 0.35);
+  color: #ecfeff;
+}
+
+/* ============================= */
+/* 🧊 GLASS / CARD EFFECTS */
+/* ============================= */
+
+.glass {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 1rem;
+}
+
+/* ============================= */
+/* 🌟 GLOW EFFECTS */
+/* ============================= */
+
+.glow-cyan {
+  box-shadow:
+    0 0 10px rgba(6, 182, 212, 0.4),
+    0 0 25px rgba(6, 182, 212, 0.25);
+}
+
+.glow-hover:hover {
+  box-shadow:
+    0 0 12px rgba(6, 182, 212, 0.45),
+    0 0 40px rgba(6, 182, 212, 0.35);
+}
+
+/* ============================= */
+/* 🎯 BUTTON POLISH */
+/* ============================= */
+
+.btn-primary {
+  @apply px-5 py-2 rounded-lg font-semibold text-sm tracking-wide
+         bg-cyan-500 text-slate-900
+         hover:bg-cyan-400 transition-all duration-300;
+}
+
+.btn-outline {
+  @apply px-5 py-2 rounded-lg font-semibold text-sm tracking-wide
+         border border-cyan-500 text-cyan-400
+         hover:bg-cyan-500 hover:text-slate-900
+         transition-all duration-300;
+}
+
+/* ============================= */
+/* 🌀 SCROLLBAR (WEBKIT) */
+/* ============================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(6, 182, 212, 0.9),
+    rgba(8, 145, 178, 0.9)
+  );
+  border-radius: 6px;
+}
+
+/* ============================= */
+/* 🧠 LINK UNDERLINE ANIMATION */
+/* ============================= */
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #22d3ee;
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ============================= */
+/* 🚀 SECTION FADE-IN */
+/* ============================= */
+
+.fade-in {
+  animation: fadeInUp 0.8s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================= */
+/* 📱 RESPONSIVE TWEAKS */
+/* ============================= */
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.75rem !important;
+  }
+}

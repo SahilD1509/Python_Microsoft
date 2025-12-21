@@ -1,0 +1,23 @@
+Syntax
+Rules for how a sentence is constructed.
+Rules for how each instruction is written.
+
+Semantics
+Actual meaning of statements.
+The effect of instruction have.
+
+Script 
+A program that is short simple and can be written very quickly.
+
+Automation 
+The process of replacing manual step with one that happens automatically.
+
+Keywords
+These are reserved words that are used to construct instructions.
+A keyword is a reserved word in a programming language that performs a specific purpose. In your first Python example, you briefly encountered the keywords for and in.  Note that keywords will often appear in bold in this course. 
+
+Values: True, False, None
+Conditions: if, elif, else
+Logical operators: and, or, not
+Loops: for, in, while, break, continue
+Functions: def, return  

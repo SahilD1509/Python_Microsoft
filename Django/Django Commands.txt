@@ -1,0 +1,7 @@
+py -m install Django
+
+py -m django-admin startproject firstproject
+
+py manage.py start userapp
+
+py manage.py runserver

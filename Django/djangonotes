@@ -1,0 +1,5 @@
+to check version of django
+py -m django --version
+
+to run django project
+django-admin start-project firstproject
